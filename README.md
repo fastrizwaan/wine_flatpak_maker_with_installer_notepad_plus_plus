@@ -1,11 +1,6 @@
 # wine flatpak maker with installer e.g., notepad_plus_plus
 Create wine64 bit application flatpaks using flatpak-builder and windows app installer
-flatpak-builder --repo="repo" --force-clean "build" org.notepad_plus_plus.NotepadPlusPlus.yml
-flatpak --user remote-add --no-gpg-verify "org.notepad_plus_plus.NotepadPlusPlus" "repo"
-flatpak build-bundle "repo" "org.notepad_plus_plus.NotepadPlusPlus.flatpak" org.notepad_plus_plus.NotepadPlusPlus  --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
 
-flatpak --user install org.notepad_plus_plus.NotepadPlusPlus.flatpak
-flatpak run org.notepad_plus_plus.NotepadPlusPlus
 This is similar to a `Wine Bottle` or `PlayOnLinux's custom installed application`
 
 or in other words `wine application inside flatpak`

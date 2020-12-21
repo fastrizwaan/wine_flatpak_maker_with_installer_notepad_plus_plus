@@ -14,3 +14,11 @@ flatpak-builder --user --install --force-clean build-dir org.notepad_plus_plus.N
 flatpak run org.notepad_plus_plus.NotepadPlusPlus
 flatpak run --command=bash org.notepad_plus_plus.NotepadPlusPlus ; #to check what's inside the flatpak's /app directory
 ```
+###Build a flatpak bundle file from the above built repo:
+
+flatpak-builder --repo="repo" --force-clean "build" org.notepad_plus_plus.NotepadPlusPlus.yaml
+flatpak --user remote-add --no-gpg-verify "org.notepad_plus_plus.NotepadPlusPlus" "repo"
+flatpak build-bundle "repo" "org.notepad_plus_plus.NotepadPlusPlus.flatpak" org.notepad_plus_plus.NotepadPlusPlus  --runtime-repo="https://flathub.org/repo/flathub.flatpakrepo"
+
+flatpak --user install org.notepad_plus_plus.NotepadPlusPlus.flatpak
+flatpak run org.notepad_plus_plus.NotepadPlusPlus

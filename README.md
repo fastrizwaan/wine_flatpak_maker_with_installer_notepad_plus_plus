@@ -1,6 +1,10 @@
 # wine flatpak maker with installer e.g., notepad_plus_plus
 Create wine64 bit application flatpaks using flatpak-builder and windows app installer
 
+This is similar to a `Wine Bottle` or `PlayOnLinux's custom installed application`
+
+or in other words `wine application inside flatpak`
+
 files copied from flathub submission of notepad plus plus.
 https://github.com/thejavascriptman/flathub.git
 
